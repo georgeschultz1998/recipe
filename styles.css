@@ -786,6 +786,7 @@ input:checked~label:not(.steps) span:after {
     /* START - menu section related css */
 
     #menusection{
+        height: 220px;
         position: fixed;
         top:0;
         background-color: white;
@@ -825,11 +826,12 @@ input:checked~label:not(.steps) span:after {
         display:inline-flex;
         width: 60px;
         padding-top: 15px;
+        padding-right: 30px;
     }
 
 
     ul:nth-child(3) {
-        overflow: auto;
+        overflow: hidden;
         max-height: 200px;
         padding-left: 0px;
         padding-top: 0px;
@@ -850,6 +852,8 @@ input:checked~label:not(.steps) span:after {
         grid-template-columns: 
         "menimage"
         "mentext";
+        margin-bottom: 0;
+
     }
 
     #menuoptions li a img{
@@ -858,26 +862,53 @@ input:checked~label:not(.steps) span:after {
         margin-bottom: 0;
     }
 
+
     #menuoptions li a p{
         grid-area: mentext;
         margin-top: 90px;
-        margin-left: 0px;
+        margin-bottom: 10px;
         padding-left: 0;
+        margin-left: 30px;
+        text-align: left;
     }
+
+
+    #menuoptions li:nth-of-type(1) a p{
+        margin-left: 25px;
+    }
+
+    #menuoptions li:nth-of-type(3) a p{
+        margin-left: 35px;
+    }
+
+
+    #menuoptions li:nth-of-type(5) a p{
+        margin-left: 25px;
+    }
+
+    #menuoptions li:nth-of-type(6) a p{
+        margin-left: 28px;
+    }
+    #menuoptions li:nth-of-type(7) a p{
+        margin-left: 26px;
+    }
+
 
     #menuoptions li{
         margin: 0;
         padding: 0;
         width: 130px;
-        height: 120px;
+        height: 130px;
         background-color: white;
+
     }
 
     #menuoptions li a{
         width:130px;
-        height: 120px;
+        height: 130px;
         margin: 0;
         padding: 0;
+
     }
 
     /* END - menu section related css */
@@ -885,7 +916,7 @@ input:checked~label:not(.steps) span:after {
     /* START - street section related css */
 
     #streetsection {
-        margin-top: 220px;
+        margin-top: 230px;
         flex: 1;
         order: 2;
         border: none;
@@ -901,7 +932,9 @@ input:checked~label:not(.steps) span:after {
     }
 
     #streeth1 {
+        margin: 0;
         margin-top: 5px;
+        padding-bottom: 27px;
         width: 400px;
         text-align: left;
         padding-left: 10px;
@@ -910,19 +943,18 @@ input:checked~label:not(.steps) span:after {
     }
 
     #streetnav {
-        height: 100px;
+        height: 0px;
+        width: 0;
         background-color: transparent;
         grid-area: streetnav;
         width: 834px;
-
-        margin: 0;
+        display: hidden;
     }
 
 
     #streetnav ul {
         width: 795px;
-        max-height: 200px;
-        ;
+        max-height: 190px;
         display: grid;
         grid-template-columns: 200px 200px 200px 200px;
         list-style: none;
@@ -931,7 +963,7 @@ input:checked~label:not(.steps) span:after {
         align-self: center;
         background: rgba(255,255,255,.7);
         padding-top: 20px;
-
+        padding-bottom: 20px;
 
     }
 
@@ -971,7 +1003,7 @@ input:checked~label:not(.steps) span:after {
         width: 834px;
         grid-area: streetimg;
         position: absolute;
-        top: 300px;
+        top: 310px;
         margin: auto;
         z-index: -1;
     }
@@ -979,7 +1011,7 @@ input:checked~label:not(.steps) span:after {
     #streettext {
         grid-area: streettext;
         padding: 10px;
-        margin-top: 1130px;
+        margin-top: 1230px;
     }
 
     /* END - street section related css */
