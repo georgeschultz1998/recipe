@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    width: 375px;
+    width: 414px;
     background-color: #F2F2F2;
     margin: 0 auto;
     display: flex;
@@ -22,27 +22,33 @@ body {
     justify-content: center;
 }
 
-#menusection{
+#menusection {
     order: 1;
 }
-#streetsection{
+
+#streetsection {
     order: 2;
 
 }
-#detsection{
+
+#detsection {
     order: 3;
 }
-#ingdirdiv{
+
+#ingdirdiv {
     order: 4;
 }
-#dirsection{
+
+#dirsection {
     margin-bottom: 100px;
     margin-left: 15px;
 }
-#sidesection{
+
+#sidesection {
     order: 5;
 }
-#connectsection{
+
+#connectsection {
     order: 6;
 }
 
@@ -106,7 +112,7 @@ dt {
 }
 
 #menusection {
-    width: 375px;
+    width: 414px;
     height: 160px;
     background-color: #F2F2F2;
     border: none;
@@ -142,7 +148,7 @@ ul:nth-child(3) {
     padding-left: 0px;
     padding-top: 0px;
     margin: 0;
-    width: 375px;
+    width: 414px;
     background-color: white;
     transition: max-height .2s ease-out;
 }
@@ -169,7 +175,7 @@ ul:nth-child(3) {
 
 #menuoptions li {
     text-decoration: none;
-    width: 285px;
+    width: 324px;
     padding: 10px;
 
 }
@@ -217,8 +223,7 @@ label span {
 #tools {
     position: fixed;
     top: 0;
-    margin-left: 60px;
-    width: 260px;
+    width: 414px;
     height: 70px;
     padding-top: 10px;
     background-color: #EB5428;
@@ -234,7 +239,7 @@ label span {
     color: black;
     position: fixed;
     top: 0;
-    margin-left: 285px;
+    margin-left: 324px;
     width: 90px;
     height: 65px;
     padding-top: 15px;
@@ -307,7 +312,7 @@ label span {
     background-color: #F2F2F2;
     padding-top: 0px;
     height: 500px;
-    width: 375px;
+    width: 414px;
     flex: 1;
     border: none;
 
@@ -325,7 +330,7 @@ label span {
 #streeth1 {
     margin-top: 5px;
     grid-area: streeth1;
-    width: 375px;
+    width: 414px;
     font-family: 'Bebas Neue', cursive;
 
 }
@@ -334,13 +339,13 @@ label span {
     height: 100px;
     background-color: #F2F2F2;
     grid-area: streetnav;
-    width: 375px;
+    width: 414px;
 
 }
 
 
 #streetnav ul {
-    width: 300px;
+    width: 339px;
     max-height: 200px;
     ;
     display: grid;
@@ -376,7 +381,7 @@ label span {
 
 
 #streetimg {
-    width: 375px;
+    width: 414px;
     grid-area: streetimg;
 }
 
@@ -397,7 +402,7 @@ label span {
 
 /* Start - detail section related css */
 #detsection {
-    width: 375px;
+    width: 414px;
     height: 150px;
     margin: 0;
     background-color: #F2F2F2;
@@ -411,7 +416,7 @@ label span {
 
 #detsection dl {
     display: inline-block;
-    width: 375px;
+    width: 414px;
     padding-left: 10px;
     margin: 0;
     padding-top: 3px;
@@ -442,7 +447,7 @@ label span {
 
 /* START - ingredient section related css */
 #ingsection {
-    width: 375px;
+    width: 414px;
     height: 500px;
     background-color: #F2F2F2;
     border: none;
@@ -503,7 +508,7 @@ label span {
 
 /* START - sides section related css */
 #sidesection {
-    width: 375px;
+    width: 414px;
     height: 300px;
     background-color: #7ABFBF;
     flex: 1;
@@ -515,7 +520,7 @@ label span {
 }
 
 .sidediv {
-    width: 375px;
+    width: 414px;
     height: 100px;
     margin-bottom: 25px;
     display: grid;
@@ -598,7 +603,7 @@ label span {
 /* START - connect section related css */
 #connectsection {
     background-color: white;
-    width: 375px;
+    width: 414px;
     flex: 1;
     border: none;
 }
@@ -655,7 +660,7 @@ h3 {
     grid-area: footer;
     display: flex;
     flex-direction: column;
-    width: 375px;
+    width: 414px;
     align-items: center;
     justify-content: center;
 }
@@ -734,10 +739,10 @@ input:checked~label:not(.steps) span:after {
 
 /* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
 
-@media screen and (min-width:834px) {
+@media screen and (min-width:768px) {
 
     body {
-        width: 834px;
+        width: 768px;
         padding-left: 0;
         padding-right: 0;
         margin: 0 auto;
@@ -752,43 +757,47 @@ input:checked~label:not(.steps) span:after {
     #sidesection,
     #connectsection,
     #footersection {
-        width: 834px;
+        width: 768px;
         padding-left: 0;
         padding-right: 0;
         margin: 0 auto;
         z-index: 2;
     }
 
-    #ingdirdiv{
+    #ingdirdiv {
         margin-top: 10px;
         order: 4;
         display: grid;
         grid-template-areas: "ingsection dirsection";
     }
-    #dirsection
-    {
+
+    #dirsection {
         grid-area: dirsection;
-        width: 594px;
+        width: 530px;
 
     }
-    #ingsection{
+
+    #ingsection {
         grid-area: ingsection;
-        width: 240px;
-
+        width: 182px;
+        margin-bottom: 20px;
     }
 
-    #sidesection{
-        order:4;
+    #sidesection {
+        order: 4;
     }
-    #connectsection{
-        order: 5;;
+
+    #connectsection {
+        order: 5;
+        ;
     }
+
     /* START - menu section related css */
 
-    #menusection{
+    #menusection {
         height: 220px;
         position: fixed;
-        top:0;
+        top: 0;
         background-color: white;
         display: grid;
     }
@@ -801,33 +810,27 @@ input:checked~label:not(.steps) span:after {
         width: 0px;
     }
 
-    #tools{
+    #tools {
         width: 80px;
         margin-left: 0px;
-    
+
     }
 
-    #searchbar{
+    #searchbar {
         position: fixed;
         top: 0;
-        margin-left:400px ;
+        margin-left: 344px;
         margin-top: 25px;
         z-index: 1;
     }
 
-   
 
-    #user{
-        margin-left: 730px;
+
+    #user {
+        margin-left: 664px;
     }
 
 
-    #menusection img {
-        display:inline-flex;
-        width: 60px;
-        padding-top: 15px;
-        padding-right: 30px;
-    }
 
 
     ul:nth-child(3) {
@@ -836,34 +839,38 @@ input:checked~label:not(.steps) span:after {
         padding-left: 0px;
         padding-top: 0px;
         margin: 0;
-        width: 834px;
+        width: 768px;
         background-color: white;
 
     }
 
-    #menuoptions{
+    #menuoptions {
         display: grid;
-        grid-template-columns: 118px 118px 118px 118px 118px 118px 118px;
+        grid-template-columns: 109px 109px 109px 109px 109px 109px 109px;
         padding-left: 0;
     }
 
-    #menuoptions li a{
+    #menuoptions li a {
         display: grid;
-        grid-template-columns: 
-        "menimage"
-        "mentext";
+        grid-template-columns:
+            "menimage"
+            "mentext";
         margin-bottom: 0;
 
     }
 
-    #menuoptions li a img{
+    #menuoptions li a img {
+        display: inline-flex;
+        width: 60px;
+        padding-top: 15px;
+        padding-right: 30px;
         grid-area: menimage;
-        margin-left:22px;
+        margin-left: 22px;
         margin-bottom: 0;
     }
 
 
-    #menuoptions li a p{
+    #menuoptions li a p {
         grid-area: mentext;
         margin-top: 90px;
         margin-bottom: 10px;
@@ -873,28 +880,29 @@ input:checked~label:not(.steps) span:after {
     }
 
 
-    #menuoptions li:nth-of-type(1) a p{
+    #menuoptions li:nth-of-type(1) a p {
         margin-left: 25px;
     }
 
-    #menuoptions li:nth-of-type(3) a p{
+    #menuoptions li:nth-of-type(3) a p {
         margin-left: 35px;
     }
 
 
-    #menuoptions li:nth-of-type(5) a p{
+    #menuoptions li:nth-of-type(5) a p {
         margin-left: 25px;
     }
 
-    #menuoptions li:nth-of-type(6) a p{
+    #menuoptions li:nth-of-type(6) a p {
         margin-left: 28px;
     }
-    #menuoptions li:nth-of-type(7) a p{
+
+    #menuoptions li:nth-of-type(7) a p {
         margin-left: 26px;
     }
 
 
-    #menuoptions li{
+    #menuoptions li {
         margin: 0;
         padding: 0;
         width: 130px;
@@ -903,8 +911,8 @@ input:checked~label:not(.steps) span:after {
 
     }
 
-    #menuoptions li a{
-        width:130px;
+    #menuoptions li a {
+        width: 130px;
         height: 130px;
         margin: 0;
         padding: 0;
@@ -947,13 +955,13 @@ input:checked~label:not(.steps) span:after {
         width: 0;
         background-color: transparent;
         grid-area: streetnav;
-        width: 834px;
+        width: 700px;
         display: hidden;
     }
 
 
     #streetnav ul {
-        width: 795px;
+        width: 728px;
         max-height: 190px;
         display: grid;
         grid-template-columns: 200px 200px 200px 200px;
@@ -961,7 +969,7 @@ input:checked~label:not(.steps) span:after {
         margin: 0;
         justify-content: center;
         align-self: center;
-        background: rgba(255,255,255,.7);
+        background: rgba(255, 255, 255, .7);
         padding-top: 20px;
         padding-bottom: 20px;
 
@@ -1000,7 +1008,7 @@ input:checked~label:not(.steps) span:after {
     }
 
     #streetimg {
-        width: 834px;
+        width: 768px;
         grid-area: streetimg;
         position: absolute;
         top: 310px;
@@ -1018,19 +1026,21 @@ input:checked~label:not(.steps) span:after {
 
 
     /* START - detail section related css */
-    #detsection{
+    #detsection {
         display: flex;
         flex-direction: column;
         text-align: center;
         margin: 0;
         padding: 0;
     }
-    #detsection h2{
-        width: 834px;
+
+    #detsection h2 {
+        width: 768px;
         flex: 1;
     }
-    #detsection dl{
-        width: 834px;
+
+    #detsection dl {
+        width: 768px;
         flex: 1;
     }
 
@@ -1040,20 +1050,21 @@ input:checked~label:not(.steps) span:after {
     /* END - ingredient section related css */
 
     /* START - direction section related css */
-    #dirsection ol{
-        width: 500px;
-
-    }    
-    
-    #dirsection ol{
+    #dirsection ol {
         width: 500px;
 
     }
+
+    #dirsection ol {
+        width: 500px;
+
+    }
+
     /* END - direction section related css */
 
     /* START - sides section related css */
-    #sidessection{
-    }
+    #sidessection {}
+
     /* END - sides section related css */
 
     /* START - connect section related css */
