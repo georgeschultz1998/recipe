@@ -151,7 +151,7 @@ ul:nth-child(3) {
 
 }
 
-#hamlabel {
+#hamburgerlabel {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -168,13 +168,13 @@ ul:nth-child(3) {
 
 }
 
-#hamburger {
+#hamburgersvg {
     margin: 0;
     width: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: white;
-    z-index: -1;
+    z-index: 1;
 }
 
 label span {
@@ -255,7 +255,7 @@ label span {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 10px;
-    color: lightgray;
+    color: black;
 }
 
 #searchbar input:focus {
@@ -719,11 +719,19 @@ input:checked~label:not(.steps) span:after {
 
 @media screen and (min-width:834px) {
 
-    body,
+    body {
+        width: 834px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
     #menusection,
     #streetsection,
     #detsection,
     #ingsection,
+    #dirsection,
     #sidesection,
     #connectsection,
     #footersection {
@@ -731,20 +739,136 @@ input:checked~label:not(.steps) span:after {
         padding-left: 0;
         padding-right: 0;
         margin: 0 auto;
+        z-index: 2;
     }
 
+    #ingdirdiv{
+        margin-top: 10px;
+        order: 3;
+        display: grid;
+        grid-template-areas: "ingsection dirsection";
+    }
+    #dirsection
+    {
+        grid-area: dirsection;
+        width: 594px;
+
+    }
+    #ingsection{
+        grid-area: ingsection;
+        width: 240px;
+
+    }
+
+    #sidesection{
+        order:4;
+    }
+    #connectsection{
+        order: 5;;
+    }
     /* START - menu section related css */
+
+    #menusection{
+        position: fixed;
+        top:0;
+        background-color: white;
+        display: grid;
+    }
+
+    #hamburgerlabel,
+    #hamburgersvg {
+        position: static;
+        display: none;
+        z-index: -1;
+        width: 0px;
+    }
+
+    #tools{
+        width: 80px;
+        margin-left: 0px;
+    
+    }
+
+    #searchbar{
+        position: fixed;
+        top: 0;
+        margin-left:400px ;
+        margin-top: 25px;
+        z-index: 1;
+    }
+
+   
+
+    #user{
+        margin-left: 730px;
+    }
+
+
+    #menusection img {
+        display:inline-flex;
+        width: 60px;
+        padding-top: 15px;
+    }
+
+
+    ul:nth-child(3) {
+        overflow: auto;
+        max-height: 200px;
+        padding-left: 0px;
+        padding-top: 0px;
+        margin: 0;
+        width: 834px;
+        background-color: white;
+
+    }
+
+    #menuoptions{
+        display: grid;
+        grid-template-columns: 118px 118px 118px 118px 118px 118px 118px;
+        padding-left: 0;
+    }
+
+    #menuoptions li a{
+        display: grid;
+        grid-template-columns: 
+        "menimage"
+        "mentext";
+    }
+
+    #menuoptions li a img{
+        grid-area: menimage;
+        margin-left:22px;
+        margin-bottom: 0;
+    }
+
+    #menuoptions li a p{
+        grid-area: mentext;
+        margin-top: 90px;
+        margin-left: 0px;
+        padding-left: 0;
+    }
+
+    #menuoptions li{
+        margin: 0;
+        padding: 0;
+        width: 130px;
+        height: 120px;
+        background-color: white;
+    }
+
+    #menuoptions li a{
+        width:130px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+    }
+
     /* END - menu section related css */
 
     /* START - street section related css */
-    /* END - street section related css */
-    #streetsection {}
 
     #streetsection {
-        background-color: #F2F2F2;
-        padding-top: 0px;
-        height: 500px;
-        width: 375px;
+        margin-top: 220px;
         flex: 1;
         order: 2;
         border: none;
@@ -761,73 +885,126 @@ input:checked~label:not(.steps) span:after {
 
     #streeth1 {
         margin-top: 5px;
-        width: 834px;
+        width: 400px;
+        text-align: left;
+        padding-left: 10px;
         grid-area: streeth1;
 
     }
 
     #streetnav {
         height: 100px;
-        background-color: #F2F2F2;
+        background-color: transparent;
         grid-area: streetnav;
-        width: 600px;
+        width: 834px;
 
+        margin: 0;
     }
 
 
     #streetnav ul {
-        width: 300px;
+        width: 795px;
         max-height: 200px;
         ;
         display: grid;
-        grid-template-columns: 93.75px 93.75px 93.75px 93.75px;
+        grid-template-columns: 200px 200px 200px 200px;
         list-style: none;
+        margin: 0;
         justify-content: center;
+        align-self: center;
+        background: rgba(255,255,255,.7);
+        padding-top: 20px;
+
+
     }
 
+
     #streetnav ul li a {
-        width: 90px;
+        width: 100px;
         height: 80px;
         display: inline-block;
         text-align: center;
         text-decoration: none;
         color: #EB5428;
-        background-color: #F2F2F2;
-        display: flex;
-        flex-direction: column;
+        background-color: transparent;
+        display: grid;
+
         font-weight: bold;
+        margin-left: 30px;
+        margin-right: 50px;
+
+        justify-content: center;
+        align-self: center;
+
     }
 
     #streetnav ul li a svg {
         order: 1;
-        margin: 0;
-        margin-left: 28px;
-        margin-right: 0px;
+        margin-left: 0px;
+        width: 100px;
+
     }
 
     #streetnav ul li a p {
-        order: 2;
         margin: 0;
-    }
 
+    }
 
     #streetimg {
         width: 834px;
         grid-area: streetimg;
+        position: absolute;
+        top: 300px;
+        margin: auto;
+        z-index: -1;
     }
 
     #streettext {
         grid-area: streettext;
         padding: 10px;
+        margin-top: 1130px;
     }
 
+    /* END - street section related css */
+
+
     /* START - detail section related css */
+    #detsection{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    #detsection h2{
+        width: 834px;
+        flex: 1;
+    }
+    #detsection dl{
+        width: 834px;
+        flex: 1;
+    }
+
     /* END - detail section related css */
 
     /* START - ingredient section related css */
     /* END - ingredient section related css */
 
+    /* START - direction section related css */
+    #dirsection ol{
+        width: 500px;
+
+    }    
+    
+    #dirsection ol li{
+        padding-bottom: 20px;
+
+    }
+    /* END - direction section related css */
+
     /* START - sides section related css */
+    #sidessection{
+    }
     /* END - sides section related css */
 
     /* START - connect section related css */
