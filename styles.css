@@ -574,19 +574,100 @@ label span p {
 
 
 
+
+
 /* START - connect section related css */
 #connectsection {
-    background-color: #F2F2F2;
+    background-color: white;
     width: 375px;
     flex: 1;
     order: 7;
+    border: none;
 }
 
-#connectsection img {
-    width: 100px;
+#connectsection h2,
+h3 {
+    display: none;
+}
+
+#connectsection ul {
+    grid-area: li;
+    margin-top: 30px;
+    width: 355px;
+    max-height: 200px;
+    ;
+    display: grid;
+    grid-template-columns: 80px 80px 80px 80px;
+    list-style: none;
+    justify-content: center;
+}
+
+#connectsection ul li {
+    align-items: center;
+    justify-content: center;
+}
+
+#connectsection ul li a {
+    display: grid;
+    grid-template-areas:
+        "connectsvg"
+        "connecttext"
+    ;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#connectsection ul li a svg {
+    grid-area: connectsvg;
+    margin: 0;
+    padding-left: 6px;
+    padding-bottom: 0px;
+}
+
+#connectsection ul li a p {
+    grid-area: connecttext;
+    margin: 0;
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 0px;
+    color: #EB5428;
+}
+
+#footersection {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+}
+
+#footersection img {
+    flex: 1;
+    order: 1;
+    width: 200px;
+    margin-top: 10px;
+}
+
+#footersection p {
+    flex: 1;
+    order: 2;
+    margin: 0;
+    margin-top: 25px;
+}
+
+#footersection p+p {
+    flex: 1;
+    order: 3;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 /* END - connect section related css */
+
+
+
+
 
 
 
