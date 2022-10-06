@@ -5,19 +5,16 @@ easier to verify template/example was followed precicesly*/
 html {
     background-color: rgba(122, 191, 191, .5);
     color: #000000;
-    font-family: raleway, sans-serif;
+    font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
 
 }
 
-/* Flexbox fudamentals applied here to correctly order sections*/
-/* Mobile First fundamentals applied here since small screen is default */
 body {
     width: 375px;
-    font-family: Optima, sans-serif;
-    background-color: rgba(122, 191, 191, .5);
+    background-color: #F2F2F2;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -36,6 +33,38 @@ section {
 }
 
 
+/* START - Typography described in directions */
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+nav a, nav span, nav li, footer{
+    font-size: 20px;
+}
+
+p, dd, li, nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+dt{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: bold;
+}
+/* END - Typography described in directions */
+
+
+
 
 
 
@@ -50,6 +79,7 @@ section {
     width: 375px;
     height: 160px;
     background-color: #F2F2F2;
+    border: none;
 }
 
 
@@ -68,7 +98,6 @@ section {
 
 #menusection nav li {
     list-style: none;
-    font-size: 16px;
     text-decoration: none;
     display: block;
     text-align: center;
@@ -77,16 +106,20 @@ section {
     font-weight: bold;
 }
 
+ul {
+    overflow: hidden;
+    max-height: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin: 0;
+    width: 375px;
+    background-color: white;
+    transition: max-height .2s ease-out;
+}
+
 #menuoptions {
     margin-top: 20px;
 }
-
-#menuoptions ul {
-    text-align: center;
-    margin: 0;
-    padding-bottom: 0px;
-}
-
 
 #menuoptions li a:hover{
     color: black;
@@ -105,7 +138,7 @@ section {
     padding: 10px;
 }
 
-label {
+#hamlabel {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -129,8 +162,6 @@ label {
     padding-bottom: 10px;
     background-color: white;
     z-index: -1;
-
-
 }
 
 label span{
@@ -149,7 +180,6 @@ label span p{
     margin-top: 55px;
     color: black;
     font-weight: 900;
-    font-size: 12px; 
     text-transform: uppercase;
 }
 
@@ -185,8 +215,7 @@ label span p{
 #user p{
     color: black; 
     font-weight: 900;
-    font-size: 12px; 
-    padding-top: 43px;
+    padding-top: 38px;
     position: fixed;
     top: 0;
     width: 90px;
@@ -194,42 +223,126 @@ label span p{
 
 
 #searchbar{
-    flex: 1;
-    margin-top: 100px;
+    margin-top: 110px;
+    display: grid;
+    grid-template-areas: "input button";
+    border: 2px solid #EB5428;
+    width: 285px;
+    margin-left: 43px;
+    height: 35px;
+    background-color: white;
+    z-index: -1;
+
 }
 
+#searchbar p{
+    display: hidden;
+}
 
+#searchbar input{
+    display: block;
+    grid-area: input;
+    width: 235px;
+    height: 32px;
+    border: none;
+    border-color: transparent;
+    outline: none;
+}
+#searchbar input:focus{
+    border: none;
+    border-color: transparent;
+}
 
+#searchbar button{
+    grid-area: button;
+    background-color: #EB5428;
+    border: none;
+    border-color: transparent;
+    pointer-events: auto; 
+}
 
 /* END - menu section related css */
 
-/* START - header section related css */
 
-#headersection {
+
+
+
+
+
+/* START - street section related css */
+#streetsection {
     background-color: #F2F2F2;
-    padding-top: 60px;
+    padding-top: 0px;
     height: 500px;
     flex: 1;
     order: 2;
+    border: none;
+
+    display: grid;
+    grid-template-areas: 
+    "streeth1"
+    "streetnav"
+    "streetimg"
+    "streettext"
+    ;
+}
+#streeth1{
+    margin-top: 5px;
+    grid-area: streeth1;
 }
 
-#headersection nav li {
-    list-style: none;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    color: #E3F2FD;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 0;
+#streetnav{
+    height: 80px;
+    background-color: #F2F2F2;
+    grid-area: streetnav;
 }
 
-header img {
+
+#streetnav ul {
     width: 375px;
+    max-height: 200px;
+    ;
+    display: grid;
+    grid-template-columns:93.75px 93.75px 93.75px 93.75px;
+    list-style:none;
+    justify-content: center;
 }
 
-/* End - header section related css */
+#streetnav ul li a{
+    width: 93.75px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #EB5428;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+}
+
+#streetnav ul li a svg{
+    order: 1;
+    margin: 0;
+    margin-left: 28px;
+}
+
+#streetnav ul li a p{
+    order: 2;
+    margin: 0;
+}
+
+
+#streetimg {
+    width: 375px;
+    grid-area: streetimg;
+}
+
+#streettext{
+    grid-area: streettext;
+    padding: 10px;
+}
+
+/* End - street section related css */
 
 /* Start - detail section related css */
 #detsection {
@@ -297,16 +410,7 @@ header img {
 
 
 /* START - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
-ul {
-    overflow: hidden;
-    max-height: 0px;
-    padding-left: 0px;
-    padding-top: 0px;
-    margin: 0;
-    width: 375px;
-    background-color: white;
-    transition: max-height .2s ease-out;
-}
+
 
 
 /* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
