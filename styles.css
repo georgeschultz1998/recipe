@@ -738,6 +738,44 @@ input:checked~label:not(.steps) span:after {
     top: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
 
 @media screen and (min-width:768px) {
@@ -1033,15 +1071,467 @@ input:checked~label:not(.steps) span:after {
         text-align: center;
         margin: 0;
         padding: 0;
+        margin-bottom: 10px;
     }
 
     #detsection h2 {
         width: 768px;
+        margin-top: 00px;
         flex: 1;
     }
 
     #detsection dl {
         width: 768px;
+        flex: 1;
+    }
+
+    /* END - detail section related css */
+
+    /* START - ingredient section related css */
+    #ingsection {
+        margin-left: 0px;
+    }
+    #ingsection ul {
+        margin-left: 0px;
+    }
+    /* END - ingredient section related css */
+
+    /* START - direction section related css */
+    #dirsection  {
+        width: 500px;
+        margin-left: 25px
+    }
+
+    /* END - direction section related css */
+
+    /* START - sides section related css */
+    #sidesection {
+        background-color: #7ABFBF;
+        display: grid;
+        grid-template-areas: 
+        "h2 h2"
+        "div1 div2"
+        "div3 div4"
+        ;
+
+    }
+    
+    #sidesection h2 {
+        margin-top: 10px;
+        grid-area: h2;
+    }
+    
+    .sidediv {
+        width:370px;
+        height: 100px;
+        grid-area: div;
+    }
+    
+    .sidediv:nth-of-type(1) {
+        grid-area: div1;
+    }
+
+    .sidediv:nth-of-type(2) {
+        grid-area: div2;
+    }
+
+    .sidediv:nth-of-type(3) {
+        grid-area: div3;
+    }
+
+    .sidediv:nth-of-type(4) {
+        grid-area: div4;
+    }
+
+    .sidediv img {
+        margin-left: 0px;
+    }
+    
+    /* END - sides section related css */
+
+    /* START - connect section related css */
+    #connectsection {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #footersection {
+        padding-top: 30px;
+        flex: 1;
+        order: 1;
+        margin: 0;
+    }
+
+    #sociallist{
+        padding-top: 20px;
+        flex: 1;
+        order: 2;
+
+        width: 350px;
+    }
+
+    #sociallist li{
+        margin: 0;
+    }
+
+    #footersection img {
+        width: 180px;
+    }
+    footer p{
+        font-weight: bold;
+        padding-left: 0;
+        font-size: 20px;
+    }
+    #footersection p:nth-of-type(2) {
+        padding-bottom: 10px;
+    }
+
+    #connectsection ul {
+        grid-template-columns: 100px 100px 100px 100px;
+    }
+    /* END - connect section related css */
+
+    /* START - footer section related css */
+    /* END - foooter section related css */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1280px) {
+
+    body {
+        width: 1280px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    #menusection,
+    #streetsection,
+    #detsection,
+    #ingsection,
+    #dirsection,
+    #sidesection,
+    #connectsection,
+    #footersection {
+        width: 1280px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    #ingdirdiv {
+        margin-top: 10px;
+        order: 4;
+        display: grid;
+        grid-template-areas: "ingsection dirsection";
+    }
+
+    #dirsection {
+        grid-area: dirsection;
+        width: 530px;
+
+    }
+
+    #ingsection {
+        grid-area: ingsection;
+        width: 182px;
+        margin-bottom: 20px;
+    }
+
+    #sidesection {
+        order: 4;
+    }
+
+    #connectsection {
+        order: 5;
+        ;
+    }
+
+    /* START - menu section related css */
+
+    #menusection {
+        height: 220px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        display: grid;
+    }
+
+    #hamburgerlabel,
+    #hamburgersvg {
+        position: static;
+        display: none;
+        z-index: -1;
+        width: 0px;
+    }
+
+    #tools {
+        width: 80px;
+        margin-left: 0px;
+
+    }
+
+    #searchbar {
+        position: fixed;
+        top: 0;
+        margin-left: 344px;
+        margin-top: 25px;
+        z-index: 1;
+    }
+
+
+
+    #user {
+        margin-left: 664px;
+    }
+
+
+
+
+    ul:nth-child(3) {
+        overflow: hidden;
+        max-height: 200px;
+        padding-left: 0px;
+        padding-top: 0px;
+        margin: 0;
+        width: 1280px;
+        background-color: white;
+
+    }
+
+    #menuoptions {
+        display: grid;
+        grid-template-columns: 109px 109px 109px 109px 109px 109px 109px;
+        padding-left: 0;
+    }
+
+    #menuoptions li a {
+        display: grid;
+        grid-template-columns:
+            "menimage"
+            "mentext";
+        margin-bottom: 0;
+
+    }
+
+    #menuoptions li a img {
+        display: inline-flex;
+        width: 60px;
+        padding-top: 15px;
+        padding-right: 30px;
+        grid-area: menimage;
+        margin-left: 22px;
+        margin-bottom: 0;
+    }
+
+
+    #menuoptions li a p {
+        grid-area: mentext;
+        margin-top: 90px;
+        margin-bottom: 10px;
+        padding-left: 0;
+        margin-left: 30px;
+        text-align: left;
+    }
+
+
+    #menuoptions li:nth-of-type(1) a p {
+        margin-left: 25px;
+    }
+
+    #menuoptions li:nth-of-type(3) a p {
+        margin-left: 35px;
+    }
+
+
+    #menuoptions li:nth-of-type(5) a p {
+        margin-left: 25px;
+    }
+
+    #menuoptions li:nth-of-type(6) a p {
+        margin-left: 28px;
+    }
+
+    #menuoptions li:nth-of-type(7) a p {
+        margin-left: 26px;
+    }
+
+
+    #menuoptions li {
+        margin: 0;
+        padding: 0;
+        width: 130px;
+        height: 130px;
+        background-color: white;
+
+    }
+
+    #menuoptions li a {
+        width: 130px;
+        height: 130px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    /* END - menu section related css */
+
+    /* START - street section related css */
+
+    #streetsection {
+        margin-top: 230px;
+        flex: 1;
+        order: 2;
+        border: none;
+
+        display: grid;
+        grid-template-areas:
+            "streeth1"
+            "streetnav"
+            "streetimg"
+            "streettext"
+        ;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #streeth1 {
+        margin: 0;
+        margin-top: 5px;
+        padding-bottom: 27px;
+        width: 400px;
+        text-align: left;
+        padding-left: 10px;
+        grid-area: streeth1;
+
+    }
+
+    #streetnav {
+        height: 0px;
+        width: 0;
+        background-color: transparent;
+        grid-area: streetnav;
+        width: 700px;
+        display: hidden;
+    }
+
+
+    #streetnav ul {
+        width: 728px;
+        max-height: 190px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        list-style: none;
+        margin: 0;
+        justify-content: center;
+        align-self: center;
+        background: rgba(255, 255, 255, .7);
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+
+    #streetnav ul li a {
+        width: 100px;
+        height: 80px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        color: #EB5428;
+        background-color: transparent;
+        display: grid;
+
+        font-weight: bold;
+        margin-left: 30px;
+        margin-right: 50px;
+
+        justify-content: center;
+        align-self: center;
+
+    }
+
+    #streetnav ul li a svg {
+        order: 1;
+        margin-left: 0px;
+        width: 100px;
+
+    }
+
+    #streetnav ul li a p {
+        margin: 0;
+
+    }
+
+    #streetimg {
+        width: 700px;
+        grid-area: streetimg;
+        position: absolute;
+        top: 310px;
+        margin: auto;
+        z-index: -1;
+    }
+
+    #streettext {
+        grid-area: streettext;
+        padding: 10px;
+        margin-top: 1230px;
+    }
+
+    /* END - street section related css */
+
+
+    /* START - detail section related css */
+    #detsection {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    #detsection h2 {
+        width: 1280px;
+        margin-top: 00px;
+        flex: 1;
+    }
+
+    #detsection dl {
+        width: 1280px;
         flex: 1;
     }
 
