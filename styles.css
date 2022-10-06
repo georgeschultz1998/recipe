@@ -24,8 +24,8 @@ body {
 
 h1,
 h2 {
-    width: 375px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 section {
@@ -299,6 +299,9 @@ label span {
 #streeth1 {
     margin-top: 5px;
     grid-area: streeth1;
+    width: 375px;
+    font-family: 'Bebas Neue', cursive;
+
 }
 
 #streetnav {
@@ -709,3 +712,126 @@ input:checked~label:not(.steps) span:after {
 }
 
 /* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+@media screen and (min-width:834px) {
+
+    body,
+    #menusection,
+    #streetsection,
+    #detsection,
+    #ingsection,
+    #sidesection,
+    #connectsection,
+    #footersection {
+        width: 834px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+
+/* START - menu section related css */
+/* END - menu section related css */
+
+/* START - street section related css */
+/* END - street section related css */
+#streetsection{
+
+}
+
+#streetsection {
+    background-color: #F2F2F2;
+    padding-top: 0px;
+    height: 500px;
+    width: 375px;
+    flex: 1;
+    order: 2;
+    border: none;
+
+    display: grid;
+    grid-template-areas:
+        "streeth1"
+        "streetnav"
+        "streetimg"
+        "streettext"
+    ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#streeth1 {
+    margin-top: 5px;
+    width: 834px;
+    grid-area: streeth1;
+
+}
+
+#streetnav {
+    height: 100px;
+    background-color: #F2F2F2;
+    grid-area: streetnav;
+    width: 600px;
+
+}
+
+
+#streetnav ul {
+    width: 300px;
+    max-height: 200px;
+    ;
+    display: grid;
+    grid-template-columns: 93.75px 93.75px 93.75px 93.75px;
+    list-style: none;
+    justify-content: center;
+}
+
+#streetnav ul li a {
+    width: 90px;
+    height: 80px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #EB5428;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#streetnav ul li a svg {
+    order: 1;
+    margin: 0;
+    margin-left: 28px;
+    margin-right: 0px;
+}
+
+#streetnav ul li a p {
+    order: 2;
+    margin: 0;
+}
+
+
+#streetimg {
+    width: 834px;
+    grid-area: streetimg;
+}
+
+#streettext {
+    grid-area: streettext;
+    padding: 10px;
+}
+
+/* START - detail section related css */
+/* END - detail section related css */
+
+/* START - ingredient section related css */
+/* END - ingredient section related css */
+
+/* START - sides section related css */
+/* END - sides section related css */
+
+/* START - connect section related css */
+/* END - connect section related css */
+
+/* START - footer section related css */
+/* END - foooter section related css */
+
+}
