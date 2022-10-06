@@ -540,6 +540,7 @@ label span {
 }
 
 .sidediv h3 {
+    display: block;
     grid-area: sideh3;
     margin: 0%;
     width: 260px;
@@ -616,11 +617,11 @@ h3 {
 #connectsection ul {
     grid-area: li;
     margin-top: 30px;
-    width: 355px;
+    width: 414px;
     max-height: 200px;
     ;
     display: grid;
-    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-columns: 103.5px 103.5px 103.5px 103.5px;
     list-style: none;
     justify-content: center;
 }
@@ -1047,27 +1048,107 @@ input:checked~label:not(.steps) span:after {
     /* END - detail section related css */
 
     /* START - ingredient section related css */
+    #ingsection {
+        margin-left: 0px;
+    }
+    #ingsection ul {
+        margin-left: 0px;
+    }
     /* END - ingredient section related css */
 
     /* START - direction section related css */
-    #dirsection ol {
+    #dirsection  {
         width: 500px;
-
-    }
-
-    #dirsection ol {
-        width: 500px;
-
+        margin-left: 25px
     }
 
     /* END - direction section related css */
 
     /* START - sides section related css */
-    #sidessection {}
+    #sidesection {
+        background-color: #7ABFBF;
+        display: grid;
+        grid-template-areas: 
+        "h2 h2"
+        "div1 div2"
+        "div3 div4"
+        ;
 
+    }
+    
+    #sidesection h2 {
+        margin-top: 10px;
+        grid-area: h2;
+    }
+    
+    .sidediv {
+        width:370px;
+        height: 100px;
+        grid-area: div;
+    }
+    
+    .sidediv:nth-of-type(1) {
+        grid-area: div1;
+    }
+
+    .sidediv:nth-of-type(2) {
+        grid-area: div2;
+    }
+
+    .sidediv:nth-of-type(3) {
+        grid-area: div3;
+    }
+
+    .sidediv:nth-of-type(4) {
+        grid-area: div4;
+    }
+
+    .sidediv img {
+        margin-left: 0px;
+    }
+    
     /* END - sides section related css */
 
     /* START - connect section related css */
+    #connectsection {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #footersection {
+        padding-top: 30px;
+        flex: 1;
+        order: 1;
+        margin: 0;
+    }
+
+    #sociallist{
+        padding-top: 20px;
+        flex: 1;
+        order: 2;
+
+        width: 350px;
+    }
+
+    #sociallist li{
+        margin: 0;
+    }
+
+    #footersection img {
+        width: 180px;
+    }
+    footer p{
+        font-weight: bold;
+        padding-left: 0;
+        font-size: 20px;
+    }
+    #footersection p:nth-of-type(2) {
+        padding-bottom: 10px;
+    }
+
+    #connectsection ul {
+        grid-template-columns: 100px 100px 100px 100px;
+    }
     /* END - connect section related css */
 
     /* START - footer section related css */
