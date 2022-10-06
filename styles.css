@@ -35,47 +35,38 @@ section {
     border: 2px solid black;
 }
 
+
+
+
+
 /* START - menu section related css */
+
+#menusection nav{
+    position:fixed;
+    top: 0;
+}
+
 #menusection {
     width: 375px;
-    flex: 1;
-    order: 1;
+    height: 160px;
     background-color: #F2F2F2;
 }
 
-#menusection li {
-    list-style: none;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
+
+#menusection li{
+    flex: 100%;
 }
 
-#menusection img {
-    width: 50px;
-}
-
-
-/* END - menu section related css */
-
-/* START - header section related css */
-
-#headersection {
-    background-color: #F2F2F2;
-    height: 500px;
-    flex: 1;
-    order: 2;
-}
-
-nav {
-    position: fixed;
-    top: 0;
+#menusection h2 {
+    display: none;
 
 }
 
-nav li {
+#menusection img{
+    display: none;
+}
+
+#menusection nav li {
     list-style: none;
     font-size: 16px;
     text-decoration: none;
@@ -84,6 +75,154 @@ nav li {
     color: #E3F2FD;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+#menuoptions {
+    margin-top: 20px;
+}
+
+#menuoptions ul {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+
+#menuoptions li a:hover{
+    color: black;
+    background-color: #EB5428;
+}
+
+#menuoptions li a {
+    text-decoration: none;
+    color: #EB5428;
+    width: 375px;
+}
+
+#menuoptions li {
+    text-decoration: none;
+    width: 375px;
+    padding: 10px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    position: fixed;
+    top:0;
+    margin: 0;
+    padding-bottom: 0px;
+    z-index: 1;
+    background-image: url("https://github.com/georgeschultz1998/recipe/blob/main/images/hamburgerv5.png?raw=true");
+    background-size: 90px 80px;
+    width: 90px;
+    height: 80.5px;
+
+}
+
+#hamburger{
+    margin: 0;
+    width: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    z-index: -1;
+
+
+}
+
+label span{
+    margin: 0;
+    z-index: 1;
+    position: fixed;
+
+}
+label span p{
+    display: visible;
+    z-index: 1;
+    position: fixed;
+    top:0;
+    width: 90px;
+    text-align: center;
+    margin-top: 55px;
+    color: black;
+    font-weight: 900;
+    font-size: 12px; 
+    text-transform: uppercase;
+}
+
+
+#tools{
+    position:fixed;
+    top: 0;
+    margin-left: 60px;
+    width: 260px;
+    height: 70px;
+    padding-top: 10px;
+    background-color: #EB5428;
+    
+}
+
+#tools p{
+    display: none;
+    color: black;
+}
+
+#user{
+    color: black;
+    position:fixed;
+    top: 0;
+    margin-left: 285px;
+    width: 90px;
+    height: 65px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    background-color: white;
+}
+
+#user p{
+    color: black; 
+    font-weight: 900;
+    font-size: 12px; 
+    padding-top: 43px;
+    position: fixed;
+    top: 0;
+    width: 90px;
+}
+
+
+#searchbar{
+    flex: 1;
+    margin-top: 100px;
+}
+
+
+
+
+/* END - menu section related css */
+
+/* START - header section related css */
+
+#headersection {
+    background-color: #F2F2F2;
+    padding-top: 60px;
+    height: 500px;
+    flex: 1;
+    order: 2;
+}
+
+#headersection nav li {
+    list-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: #E3F2FD;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
 }
 
 header img {
@@ -113,7 +252,7 @@ header img {
 }
 
 #ingsection ul {
-    max-height: 500px;
+    max-height: 1000px;
 }
 
 /* END - ingredient section related css */
@@ -160,18 +299,19 @@ header img {
 /* START - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
 ul {
     overflow: hidden;
-    max-height: 0;
+    max-height: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin: 0;
+    width: 375px;
+    background-color: white;
     transition: max-height .2s ease-out;
 }
 
 
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
+/* END - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
+
+/* START - Included Menu Code for Mobile First Style (minus the bits you know how to do): */
 
 label span {
     background-color: #ffffff;
@@ -179,26 +319,8 @@ label span {
     height: 2px;
     position: relative;
     transition: background-color .2s ease-out;
-    width: 18px;
-}
+    width: 0px;
 
-label span:before,
-label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-label span:before {
-    top: 5px;
-}
-
-label span:after {
-    top: -5px;
 }
 
 input {
@@ -206,7 +328,7 @@ input {
 }
 
 input:checked~ul {
-    max-height: 500px;
+    max-height: 1200px;
 }
 
 input:checked~label span {
