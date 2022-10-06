@@ -35,32 +35,38 @@ section {
 
 /* START - Typography described in directions */
 
-h1{
+h1 {
     font-size: 40px;
 }
 
-h2{
+h2 {
     font-size: 30px;
 }
 
-h3{
+h3 {
     font-size: 25px;
 }
 
-nav a, nav span, nav li, footer{
+nav a,
+nav span,
+nav li,
+footer {
     font-size: 20px;
 }
 
-p, dd, li, nav, input {
+p,
+dd,
+li,
+nav,
+input {
+    font-size: 16px;
+}
+
+dt {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
-dt{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-style: bold;
-}
 /* END - Typography described in directions */
 
 
@@ -70,8 +76,8 @@ dt{
 
 /* START - menu section related css */
 
-#menusection nav{
-    position:fixed;
+#menusection nav {
+    position: fixed;
     top: 0;
 }
 
@@ -80,10 +86,10 @@ dt{
     height: 160px;
     background-color: #F2F2F2;
     border: none;
+
 }
 
-
-#menusection li{
+#menusection li {
     flex: 100%;
 }
 
@@ -92,7 +98,7 @@ dt{
 
 }
 
-#menusection img{
+#menusection img {
     display: none;
 }
 
@@ -106,7 +112,7 @@ dt{
     font-weight: bold;
 }
 
-ul {
+ul:nth-child(3) {
     overflow: hidden;
     max-height: 0px;
     padding-left: 0px;
@@ -121,7 +127,7 @@ ul {
     margin-top: 20px;
 }
 
-#menuoptions li a:hover{
+#menuoptions li a:hover {
     color: black;
     background-color: #EB5428;
 }
@@ -144,7 +150,7 @@ ul {
     position: relative;
     user-select: none;
     position: fixed;
-    top:0;
+    top: 0;
     margin: 0;
     padding-bottom: 0px;
     z-index: 1;
@@ -155,7 +161,7 @@ ul {
 
 }
 
-#hamburger{
+#hamburger {
     margin: 0;
     width: 0px;
     padding-top: 10px;
@@ -164,17 +170,18 @@ ul {
     z-index: -1;
 }
 
-label span{
+label span {
     margin: 0;
     z-index: 1;
     position: fixed;
 
 }
-label span p{
+
+label span p {
     display: visible;
     z-index: 1;
     position: fixed;
-    top:0;
+    top: 0;
     width: 90px;
     text-align: center;
     margin-top: 55px;
@@ -184,25 +191,25 @@ label span p{
 }
 
 
-#tools{
-    position:fixed;
+#tools {
+    position: fixed;
     top: 0;
     margin-left: 60px;
     width: 260px;
     height: 70px;
     padding-top: 10px;
     background-color: #EB5428;
-    
+
 }
 
-#tools p{
+#tools p {
     display: none;
     color: black;
 }
 
-#user{
+#user {
     color: black;
-    position:fixed;
+    position: fixed;
     top: 0;
     margin-left: 285px;
     width: 90px;
@@ -212,8 +219,8 @@ label span p{
     background-color: white;
 }
 
-#user p{
-    color: black; 
+#user p {
+    color: black;
     font-weight: 900;
     padding-top: 38px;
     position: fixed;
@@ -222,7 +229,7 @@ label span p{
 }
 
 
-#searchbar{
+#searchbar {
     margin-top: 110px;
     display: grid;
     grid-template-areas: "input button";
@@ -235,11 +242,11 @@ label span p{
 
 }
 
-#searchbar p{
+#searchbar p {
     display: hidden;
 }
 
-#searchbar input{
+#searchbar input {
     display: block;
     grid-area: input;
     width: 235px;
@@ -247,18 +254,23 @@ label span p{
     border: none;
     border-color: transparent;
     outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    color: lightgray;
 }
-#searchbar input:focus{
+
+#searchbar input:focus {
     border: none;
     border-color: transparent;
 }
 
-#searchbar button{
+#searchbar button {
     grid-area: button;
     background-color: #EB5428;
     border: none;
     border-color: transparent;
-    pointer-events: auto; 
+    pointer-events: auto;
 }
 
 /* END - menu section related css */
@@ -274,42 +286,48 @@ label span p{
     background-color: #F2F2F2;
     padding-top: 0px;
     height: 500px;
+    width: 375px;
     flex: 1;
     order: 2;
     border: none;
 
     display: grid;
-    grid-template-areas: 
-    "streeth1"
-    "streetnav"
-    "streetimg"
-    "streettext"
+    grid-template-areas:
+        "streeth1"
+        "streetnav"
+        "streetimg"
+        "streettext"
     ;
+    font-family: 'Montserrat', sans-serif;
+
 }
-#streeth1{
+
+#streeth1 {
     margin-top: 5px;
     grid-area: streeth1;
 }
 
-#streetnav{
-    height: 80px;
+#streetnav {
+    height: 100px;
     background-color: #F2F2F2;
     grid-area: streetnav;
+    width: 375px;
+
 }
 
 
 #streetnav ul {
-    width: 375px;
+    width: 300px;
     max-height: 200px;
     ;
     display: grid;
-    grid-template-columns:93.75px 93.75px 93.75px 93.75px;
-    list-style:none;
+    grid-template-columns: 93.75px 93.75px 93.75px 93.75px;
+    list-style: none;
     justify-content: center;
 }
 
-#streetnav ul li a{
-    width: 93.75px;
+#streetnav ul li a {
+    width: 90px;
     height: 80px;
     display: inline-block;
     text-align: center;
@@ -318,15 +336,17 @@ label span p{
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
 }
 
-#streetnav ul li a svg{
+#streetnav ul li a svg {
     order: 1;
     margin: 0;
     margin-left: 28px;
+    margin-right: 0px;
 }
 
-#streetnav ul li a p{
+#streetnav ul li a p {
     order: 2;
     margin: 0;
 }
@@ -337,61 +357,222 @@ label span p{
     grid-area: streetimg;
 }
 
-#streettext{
+#streettext {
     grid-area: streettext;
     padding: 10px;
 }
 
 /* End - street section related css */
 
+
+
+
+
+
+
+
+
 /* Start - detail section related css */
 #detsection {
     width: 375px;
-    height: 500px;
+    height: 150px;
+    margin: 0;
     background-color: #F2F2F2;
+    border: none;
     flex: 1;
     order: 3;
 }
 
+#detsection h2 {
+    margin: 0;
+}
+
+#detsection dl {
+    display: inline-block;
+    width: 375px;
+    padding-left: 10px;
+    margin: 0;
+    padding-top: 3px;
+}
+
+#detsection dt {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+}
+
+#detsection dd {
+    display: inline-block;
+    padding-left: 3px;
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0;
+}
+
 /* END - detail section related css */
+
+
+
+
+
+
+
 
 /* START - ingredient section related css */
 #ingsection {
     width: 375px;
     height: 500px;
     background-color: #F2F2F2;
+    border: none;
     flex: 1;
     order: 4;
+
+}
+
+#ingsection h2 {
+    margin: 10px;
 }
 
 #ingsection ul {
     max-height: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F2F2F2;
+    padding: 0;
+    margin-left: 25px;
+}
+
+#ingsection ul li {
+    list-style-type: square;
+    padding: 10px;
+    padding-left: 3px;
+
 }
 
 /* END - ingredient section related css */
 
 /* START - directions section related css */
 #dirsection {
-    width: 375px;
+    width: 345px;
     height: 300px;
     background-color: #F2F2F2;
     flex: 1;
     order: 5;
+    border: none;
 }
 
+#dirsection h2 {
+    margin-top: 0px;
+}
+
+#dirsection ol {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+
+}
+
+#dirsection ol li p {
+    padding-left: 10px;
+}
 
 /* END- directions section related css */
 
+
+
+
 /* START - sides section related css */
-#sidsection {
+#sidesection {
     width: 375px;
     height: 300px;
-    background-color: #F2F2F2;
+    background-color: #7ABFBF;
     flex: 1;
     order: 6;
+    border: none;
 }
 
+#sidesection h2 {
+    margin-top: 10px;
+}
+
+.sidediv {
+    width: 375px;
+    height: 100px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-areas:
+        "foodimg sideh3"
+        "foodimg sidep1"
+        "foodimg sidep2"
+        "foodimg stardiv"
+    ;
+}
+
+.sidediv img {
+    grid-area: foodimg;
+    width: 80px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.sidediv h3 {
+    grid-area: sideh3;
+    margin: 0%;
+    width: 260px;
+    height: 10px;
+}
+
+.sidediv p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidediv p {
+    grid-area: sidep1;
+    width: 260px;
+    height: 5px;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.sidediv p+p {
+    grid-area: sidep2;
+    width: 200px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.stardiv {
+    grid-area: stardiv;
+    margin: 0;
+}
+
+.filledstar:first-child {
+    padding-left: 0px;
+
+}
+
+.filledstar {
+    color: #EB5428;
+    margin-top: 5px;
+    padding-left: 15px;
+    -webkit-text-stroke: 1px #fff;
+
+}
+
+.emptystar {
+    color: white;
+    padding-left: 15px;
+    -webkit-text-stroke: 1px #fff;
+}
+
+
 /* END - sides section related css */
+
+
+
+
 
 /* START - connect section related css */
 #connectsection {
