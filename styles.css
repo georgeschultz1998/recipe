@@ -262,7 +262,7 @@ label span {
     grid-template-areas: "input button";
     border: 3px solid #EB5428;
     width: 285px;
-    margin-left: 43px;
+    margin-left: 58px;
     height: 35px;
     background-color: white;
     z-index: -1;
@@ -313,6 +313,9 @@ label span {
     margin-top: 5px;
     grid-area: streeth1;
     width: 414px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: 'Bebas Neue', cursive;
 }
 
