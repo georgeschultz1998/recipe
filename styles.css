@@ -144,27 +144,43 @@ ul:nth-child(3) {
 
 #menuoptions,
 #menuoptions li {
-    margin-top: 20px;
     text-decoration: none;
     list-style: none;
-}
+    width: 514px;
+    padding: 0;
+    margin: 0px;
+    margin-right: 0px;
 
-#menuoptions li a:hover {
-    color: black;
-    background-color: #EB5428;
 }
 
 #menuoptions li a {
     text-decoration: none;
     color: #EB5428;
-    width: 285px;
+    width: 414px;
+    margin: 0;
+
 }
 
-#menuoptions li {
+#menuoptions li p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 60px;
+    width: 414px;
+    margin: 0;
     text-decoration: none;
-    width: 324px;
-    padding: 10px;
+    padding-top: 30px;
 }
+
+#menuoptions li:hover {
+    color: white;
+    background-color: #EB5428;
+}
+
+#menuoptions li a:hover {
+    color: white;
+    background-color: #EB5428;
+}
+
 
 #hamburgerlabel {
     cursor: pointer;
@@ -698,11 +714,15 @@ input:checked~label:not(.steps) span:after {
 
     /* START - menu section related css */
     #menusection {
-        height: 220px;
+        height: 190px;
         position: fixed;
         top: 0;
         background-color: white;
         display: grid;
+    }
+
+    #menusection nav {
+        height: 190px;
     }
 
     #hamburgerlabel,
@@ -711,6 +731,7 @@ input:checked~label:not(.steps) span:after {
         display: none;
         z-index: -1;
         width: 0px;
+        height: 0px;
     }
 
     #tools {
@@ -738,18 +759,30 @@ input:checked~label:not(.steps) span:after {
         margin: 0;
         width: 768px;
         background-color: white;
+        height: 170px;
+        padding-top: 20px;
     }
 
     #menuoptions {
         display: grid;
         grid-template-columns: 109px 109px 109px 109px 109px 109px 109px;
         padding-left: 0;
+        margin-top: 40px;
+        height: 110px;
+
+    }
+
+    #menuoptions li {
+        margin-top: 10px;
+        height: 120px;
+        padding-top: 10px;
     }
 
     #menuoptions li a {
         display: grid;
         grid-template-columns: "menimage""mentext";
         margin-bottom: 0;
+        height: 120px;
     }
 
     #menuoptions li a img {
@@ -764,11 +797,13 @@ input:checked~label:not(.steps) span:after {
 
     #menuoptions li a p {
         grid-area: mentext;
-        margin-top: 90px;
+        margin-top: 80px;
         margin-bottom: 10px;
         padding-left: 0;
+        padding-top: 0px;
         margin-left: 30px;
         text-align: left;
+        padding-bottom: 30px;
     }
 
     #menuoptions li:nth-of-type(1) a p {
@@ -776,6 +811,10 @@ input:checked~label:not(.steps) span:after {
     }
 
     #menuoptions li:nth-of-type(3) a p {
+        margin-left: 35px;
+    }
+
+    #menuoptions li:nth-of-type(4) a p {
         margin-left: 35px;
     }
 
@@ -795,13 +834,13 @@ input:checked~label:not(.steps) span:after {
         margin: 0;
         padding: 0;
         width: 130px;
-        height: 130px;
+        height: 120px;
         background-color: white;
     }
 
     #menuoptions li a {
         width: 130px;
-        height: 130px;
+        height: 120px;
         margin: 0;
         padding: 0;
     }
@@ -809,7 +848,7 @@ input:checked~label:not(.steps) span:after {
     /* END - menu section related css */
     /* START - street section related css */
     #streetsection {
-        margin-top: 230px;
+        margin-top: 200px;
         flex: 1;
         order: 2;
         border: none;
@@ -821,25 +860,29 @@ input:checked~label:not(.steps) span:after {
     #streeth1 {
         margin: 0;
         margin-top: 5px;
-        padding-bottom: 27px;
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+        height: 50px;
         width: 400px;
         text-align: left;
         padding-left: 10px;
         grid-area: streeth1;
+        z-index: 5;
     }
 
     #streetnav {
-        height: 0px;
+        height: 6px;
         width: 0;
-        background-color: transparent;
+        background-color: #F2F2F2;
         grid-area: streetnav;
-        width: 700px;
-        display: hidden;
+        width: 768px;
+
     }
 
     #streetnav ul {
         width: 728px;
         max-height: 190px;
+        height: 80px;
         display: grid;
         grid-template-columns: 200px 200px 200px 200px;
         list-style: none;
@@ -847,8 +890,10 @@ input:checked~label:not(.steps) span:after {
         justify-content: center;
         align-self: center;
         background: rgba(255, 255, 255, .7);
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        position: absolute;
+        top: 271px
     }
 
     #streetnav ul li a {
@@ -881,7 +926,7 @@ input:checked~label:not(.steps) span:after {
         width: 768px;
         grid-area: streetimg;
         position: absolute;
-        top: 310px;
+        top: 270px;
         margin: auto;
         z-index: -1;
     }
@@ -1183,6 +1228,7 @@ input:checked~label:not(.steps) span:after {
     }
 
     #streetnav ul {
+        position: static;
         width: 108px;
         height: 707px;
         max-height: 710px;
