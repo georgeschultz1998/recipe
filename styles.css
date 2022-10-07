@@ -878,8 +878,6 @@ input:checked~label:not(.steps) span:after {
         background-color: #F2F2F2;
         grid-area: streetnav;
         width: 768px;
-        display: transparent;
-
     }
 
     #streetnav ul {
