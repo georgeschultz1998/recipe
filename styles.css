@@ -873,11 +873,12 @@ input:checked~label:not(.steps) span:after {
     }
 
     #streetnav {
-        height: 6px;
+        height: 0px;
         width: 0;
         background-color: #F2F2F2;
         grid-area: streetnav;
         width: 768px;
+        display: transparent;
 
     }
 
@@ -895,7 +896,7 @@ input:checked~label:not(.steps) span:after {
         padding-top: 30px;
         padding-bottom: 30px;
         position: absolute;
-        top: 271px
+        top: 270px
     }
 
     #streetnav ul li a {
