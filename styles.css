@@ -780,7 +780,6 @@ input:checked~label:not(.steps) span:after {
 
     #menuoptions li a {
         display: grid;
-        grid-template-columns: "menimage""mentext";
         margin-bottom: 0;
         height: 120px;
     }
@@ -790,7 +789,7 @@ input:checked~label:not(.steps) span:after {
         width: 60px;
         padding-top: 15px;
         padding-right: 30px;
-        grid-area: menimage;
+        grid-area: menuimage;
         margin-left: 22px;
         margin-bottom: 0;
     }
@@ -1426,7 +1425,6 @@ input:checked~label:not(.steps) span:after {
         margin-left: 0px;
         display: grid;
         grid-template-areas: "img text";
-        align-content: left;
     }
 
     #footertext {
